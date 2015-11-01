@@ -18,7 +18,7 @@ $(window).on("resize", (function(){
 
         if (w >= 1200) breakpoint.set("lg");
         else if (w >= 992) breakpoint.set("md");
-        else if (w >= 768) breakpoint.set("sm");
+        else if (w >= 767) breakpoint.set("sm");
         else breakpoint.set("xs");
 
         return getBP;
@@ -36,22 +36,26 @@ $(document).ready(function() {
 
         var trigger = $(this),
             expander = $("#" + $(this).data('expand')),
-            expanded = expander.data('collapsed');
+            expanded = expander.data('collapsed'),
+            collapsedText = $(this).data('collapsed-content') || 'hide details <i class="fa fa-chevron-up"></i>',
+            expandedText = $(this).data('expanded-content') || 'see more details <i class="fa fa-chevron-down"></i>',
+            interContainer = $(this).data('inter-container') || '.more-details-list',
+            height = $(this).data('closed-height') || '10em';
 
         if (expanded) {
-            var height = expander.find('.more-details-list').height();
+            var height = expander.find(interContainer).height();
             expander.animate({
                 height: height,
-            }, 1000, function() {
+            }, 500, function() {
                 expander.data('collapsed', false);
-                trigger.html('hide details <i class="fa fa-chevron-up"></i>');
+                trigger.html(expandedText);
             })
         } else {
             expander.animate({
-                height: '10em',
-            }, 1000, function() {
+                height: height,
+            }, 500, function() {
                 expander.data('collapsed', true);
-                trigger.html('see more details <i class="fa fa-chevron-down"></i>');
+                trigger.html(collapsedText);
             })
         }
     });

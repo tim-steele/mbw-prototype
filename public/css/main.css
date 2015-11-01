@@ -81,6 +81,13 @@ a[href $='.pdf']:after {
     margin-left:5px;
 }
 
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+    background-color:#666666;
+    background-image:none;
+    border:solid 1px #cccccc;
+    text-shadow:none;
+}
+
 /* EFFECTS */
 @-webkit-keyframes hvr-icon-pulse {
   25% {
@@ -200,7 +207,7 @@ button.cart:hover:before, button.cart:focus:before, button.cart:active:before {
  * Off Canvas
  * --------------------------------------------------
  */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   .row-offcanvas {
     position: relative;
     -webkit-transition: all .25s ease-out;
@@ -355,13 +362,14 @@ button.cart:hover:before, button.cart:focus:before, button.cart:active:before {
 
 .top-banner {
     margin-bottom:1.45em;
+    margin-top:-20px;
     text-align:center;
 }
 
 .banner-content {
     background:#000000;
     color:#f3f3f3;
-    margin:-20px -15px 0px -15px;
+    margin:-0px -15px 0px -15px;
     padding:5px 0px;
     text-align:center;
 }
@@ -428,13 +436,16 @@ button.cart:hover:before, button.cart:focus:before, button.cart:active:before {
 /* JUMBOTRON STYLES */
 .jumbotron {
     background:transparent url(../img/jumbo-background.gif) repeat top left;
+    margin-bottom:0px;
     padding-top:24px;
     padding-bottom:24px;
     position:relative;
 }
 
 .jumbotron h1 {
-    font-size:1.5em;
+    font-size:1.75em;
+    font-weight:bold;
+    margin-bottom:0px;
     margin-top:0px;
 }
 
@@ -462,6 +473,23 @@ button.cart:hover:before, button.cart:focus:before, button.cart:active:before {
     max-width: 100%;
 }
 
+/* OFF CANVAS MENU */
+#jumbotron-more-details {
+    height:0px;
+    overflow:hidden;
+    margin-top:20px;
+    position:relative;
+}
+
+.btn-read-more, .btn-read-more:hover, .btn-read-more:focus {
+    background-color:#454545;
+    background-image:none;
+    border:#454545;
+    float:right;
+
+}
+
+/* FOR INTERACTIVE MENU */
 .jumbo-menu {
         position:absolute;
         left:12px;
@@ -503,7 +531,7 @@ button.cart:hover:before, button.cart:focus:before, button.cart:active:before {
 
 /* CATEOGRY CARD STYLES */
 .main-container .row {
-    margin-bottom:3em;
+    margin-bottom:1.75em;
 }
 
 .section-heading {
@@ -810,7 +838,7 @@ button.cart:hover:before, button.cart:focus:before, button.cart:active:before {
     padding-left:20px;
 }
 
-.read-more-details {
+a.read-more-details {
     bottom:0px;
     display:block;
     padding-top:.25em;
@@ -1273,12 +1301,12 @@ button.cart {
     }
 
     .products-carousel-right, .products-carousel-left {
-        display:none;
+        display:none !important;
     }
 
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
     .sidebar-offcanvas {
         width:95%;
     }
