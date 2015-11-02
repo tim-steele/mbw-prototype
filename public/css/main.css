@@ -147,49 +147,6 @@ button.cart:hover:before, button.cart:focus:before, button.cart:active:before {
   animation-iteration-count: infinite;
 }
 
-.category-card h2 a {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-}
-.category-card h2 a:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #868686;
-  -webkit-transform: scaleY(0);
-  transform: scaleY(0);
-  -webkit-transform-origin: 50% 0;
-  transform-origin: 50% 0;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-}
-.category-card h2 a:hover, .category-card h2 a:focus, .category-card h2 a:active {
-  color: white;
-}
-.category-card h2 a:hover:before, .category-card h2 a:focus:before, .category-card h2 a:active:before {
-  -webkit-transform: scaleY(1);
-  transform: scaleY(1);
-}
-
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     font-style:italic;
 }
@@ -557,7 +514,7 @@ button.cart:hover:before, button.cart:focus:before, button.cart:active:before {
 }
 
 .category-card h2, .product-detail-section .category-card h2 {
-    background-color:#666666;
+    background-color:#ffffff;
     font-size:1em;
     margin-bottom:0px;
     margin-top:0px;
@@ -565,14 +522,18 @@ button.cart:hover:before, button.cart:focus:before, button.cart:active:before {
 }
 
 .category-card h2 a {
-    border-top:solid 1px #666666;
-    color:#ffffff;
+    color:#000000;
     display:block;
     height:100%;
     min-height:30px;
     padding:10px;
     text-decoration: none;
     width:100%;
+}
+
+.category-card h2 a:hover {
+    font-size:1.05em;
+    font-weight:bold;
 }
 
 .category-card h2 a:hover {
@@ -608,16 +569,9 @@ button.cart:hover:before, button.cart:focus:before, button.cart:active:before {
 }
 
 .category-card .product-count {
-    background-color:#999999;
-    background-color:rgba(153,153,153,.75);
-    color:#ffffff;
+    color:#878787;
     display:inline-block;
     padding:0px 5px;
-    position:absolute;
-    right:0px;
-    top:12.6em;
-    z-index:999999;
-    -webkit-transform: translate3d(0px, 0px, 0px);
 }
 
 .category-page-row {}
@@ -652,22 +606,23 @@ button.cart:hover:before, button.cart:focus:before, button.cart:active:before {
 }
 
 .free-shipping:before {
-    background-color:#999999;
-    background-color:rgba(153,153,153,.75);
-    color:#ffffff;
+    background-color:#ffffff;
+    background-color:rgba(255,255,255,.75);
+    color:#000000;
     content: "Free Shipping";
     font-size:.9em;
-    padding:3px;
+    left:0px;
+    padding:3px 10px;
     position:absolute;
-    right:0px;
-    top:13.65em;
+    top:2.8em;
     z-index:999999;
     -webkit-transform: translate3d(0px, 0px, 0px);
 }
 
 .prices {
-    background-color:#ffae4b;
-    background-color:rgba(255, 174, 75, .75);
+    background-color:#ffffff;
+    background-color:rgba(255, 255, 255, .75);
+    padding:5px 10px;
     position:absolute;
     left:0px;
     top:0px;
@@ -1432,7 +1387,7 @@ button.cart {
 
 @media (min-width:992px) {
     .category-card h2 a {
-        min-height:51px;
+        min-height:60px;
     }
     .alt-product-image-row .col-md-4:nth-child(3n+1) {
         clear:both;

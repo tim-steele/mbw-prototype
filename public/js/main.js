@@ -37,8 +37,8 @@ $(document).ready(function() {
         var trigger = $(this),
             expander = $("#" + $(this).data('expand')),
             expanded = expander.data('collapsed'),
-            collapsedText = $(this).data('collapsed-content') || 'hide details <i class="fa fa-chevron-up"></i>',
-            expandedText = $(this).data('expanded-content') || 'see more details <i class="fa fa-chevron-down"></i>',
+            collapsedText = $(this).data('collapsed-content') || 'see more details <i class="fa fa-chevron-down"></i>',
+            expandedText = $(this).data('expanded-content') || 'hide details <i class="fa fa-chevron-up"></i>',
             interContainer = $(this).data('inter-container') || '.more-details-list',
             height = $(this).data('closed-height') || '10em';
 
